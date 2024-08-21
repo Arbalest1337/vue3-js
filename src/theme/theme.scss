@@ -1,0 +1,46 @@
+// https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss
+
+// 全局样式变量
+$layout-bg: #fff;
+$main-bg: #f1f7fc;
+$font-color: #171717;
+$primary-color: #006fef;
+$menu-item-font-color: #34495c;
+$danger: #ff6969;
+
+// element-plus主题变量
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+    $colors: (
+        'white': #ffffff,
+        'black': #000000,
+        'primary': (
+            'base': $primary-color
+        ),
+        'success': (
+            'base': #67c23a
+        ),
+        'warning': (
+            'base': #e6a23c
+        ),
+        'danger': (
+            'base': $danger
+        ),
+        'error': (
+            'base': #f56c6c
+        ),
+        'info': (
+            'base': #909399
+        )
+    )
+);
+
+@mixin menuBorder() {
+    border-top: 3px solid transparent;
+    border-bottom: none;
+    margin: 0 16px;
+}
+
+@mixin menuBorderActive() {
+    border-top: 3px solid $primary-color;
+    border-bottom: none;
+}

@@ -1,0 +1,57 @@
+// 动画过渡效果
+
+// fade
+.fade {
+    &-enter-from,
+    &-leave-to {
+        opacity: 0;
+    }
+
+    &-enter-to,
+    &-leave-form {
+        opacity: 1;
+    }
+
+    &-enter-active,
+    &-leave-active {
+        transition: all 0.3s;
+    }
+}
+
+// layout
+.layout {
+    &-enter-from,
+    &-leave-to {
+        opacity: 0;
+    }
+
+    &-enter-to,
+    &-leave-form {
+        opacity: 1;
+    }
+
+    &-leave-to {
+        transform: translateX(20px);
+    }
+
+    &-enter-active,
+    &-leave-active {
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+// breadcrumb
+.breadcrumb {
+    &-enter-from {
+        opacity: 0.2;
+        transform: translateX(15px);
+    }
+
+    &-enter-to {
+        opacity: 1;
+    }
+
+    &-enter-active {
+        transition: all 0.8s ease-in-out;
+    }
+}
